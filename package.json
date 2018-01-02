@@ -1,0 +1,33 @@
+{
+  "name": "jsonpromise",
+  "version": "1.0.0",
+  "description": "Simple jsonp with promise support",
+  "main": "lib/index.js",
+  "scripts": {
+    "build": "babel src/ -d lib/ && minify lib/ -d lib/",
+    "prepublish": "npm run build",
+    "flow": "flow",
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/Qupe/jsonPromise.git"
+  },
+  "keywords": [
+    "jsonp",
+    "promise",
+    "es6"
+  ],
+  "author": "Evgeny Ivanov",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Qupe/jsonPromise/issues"
+  },
+  "homepage": "https://github.com/Qupe/jsonPromise#readme",
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-minify": "^0.2.0",
+    "babel-preset-flow": "^6.23.0",
+    "flow-bin": "^0.62.0"
+  }
+}
