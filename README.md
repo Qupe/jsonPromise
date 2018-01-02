@@ -1,4 +1,7 @@
 # jsonPromise
 import jsonPromise form 'jsonpromise'
 
-jsonPromise('https://jsonplaceholder.typicode.com/comments', {postId: 1}, {callbackName: 'custom_callback', waitTime: 1000})
+`new jsonPromise(url: string, params: Object, {callbackName: string, waitTime: number})
+    .then(response => {
+        // some data
+    });`
