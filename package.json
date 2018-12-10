@@ -2,9 +2,9 @@
   "name": "jsonpromise",
   "version": "1.0.0",
   "description": "Simple jsonp with promise support",
-  "main": "lib/index.js",
+  "main": "lib/index.min.js",
   "scripts": {
-    "build": "babel src/ -d lib/ && minify lib/ -d lib/",
+    "build": "babel src/ -d lib/ && minify < ./lib/index.js > ./lib/index.min.js",
     "prepublish": "npm run build",
     "flow": "flow",
     "test": "test"
@@ -29,5 +29,6 @@
     "babel-minify": "^0.2.0",
     "babel-preset-flow": "^6.23.0",
     "flow-bin": "^0.62.0"
-  }
+  },
+  "dependencies": {}
 }
