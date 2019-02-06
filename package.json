@@ -1,13 +1,11 @@
 {
   "name": "jsonpromise",
-  "version": "1.0.0",
+  "version": "0.2.0",
   "description": "Simple jsonp with promise support",
-  "main": "lib/index.min.js",
+  "main": "./dist/index.js",
+  "types": "./src/index.d.ts",
   "scripts": {
-    "build": "babel src/ -d lib/ && minify < ./lib/index.js > ./lib/index.min.js",
-    "prepublish": "npm run build",
-    "flow": "flow",
-    "test": "test"
+    "build": "babel src/index.ts -o dist/index.js"
   },
   "repository": {
     "type": "git",
@@ -25,10 +23,10 @@
   },
   "homepage": "https://github.com/Qupe/jsonPromise#readme",
   "devDependencies": {
-    "babel-cli": "^6.26.0",
-    "babel-minify": "^0.2.0",
-    "babel-preset-flow": "^6.23.0",
-    "flow-bin": "^0.62.0"
+    "@babel/cli": "^7.2.3",
+    "@babel/core": "^7.2.2",
+    "@babel/preset-typescript": "^7.1.0",
+    "babel-preset-minify": "^0.5.0"
   },
   "dependencies": {}
 }
